@@ -13,6 +13,6 @@ public class MainExtended {
         System.out.println(firstLetterOfSurname);
         System.out.println(age);
         System.out.println(height);
-        System.out.println(adult);
+        System.out.println("Czy jestem dorosły?  - "  + adult);
     }
 }
