@@ -11,5 +11,6 @@ public class Main {
         System.out.println(myAge);
         System.out.println(height);
         System.out.println(carClass);
+        System.out.println(isGoodProgrammer);
     }
 }
