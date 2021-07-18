@@ -25,7 +25,7 @@ public class Grades {
         double sum = 0;
         for (int i = 0; i < grades.length; i++) {
             sum = sum + grades[i];
-            average = sum / 10;
+            average = sum / this.size;
         }
         return average;
     }
