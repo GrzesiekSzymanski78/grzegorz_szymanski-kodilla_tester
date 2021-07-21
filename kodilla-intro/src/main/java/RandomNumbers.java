@@ -10,9 +10,9 @@ public class RandomNumbers {
         randomNumbers.getRandomNumbers();
         System.out.println(randomNumbers);
         randomNumbers.getMax(randomNumbers.max);
-        System.out.println(randomNumbers.max);
+        System.out.println("The largest number is: " + randomNumbers.max);
         randomNumbers.getMin(randomNumbers.min);
-        System.out.println(randomNumbers.min);
+        System.out.println("The smallest number is: " + randomNumbers.min);
     }
 
     public int[] getRandomNumbers() {
