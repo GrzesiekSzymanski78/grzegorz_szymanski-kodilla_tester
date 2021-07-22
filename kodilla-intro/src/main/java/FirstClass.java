@@ -21,7 +21,15 @@ public class FirstClass {
         grades.add(5);
         grades.add(6);
         System.out.println(grades.lastGrade());
-        System.out.println(grades.calculateAverageGrade(grades.average));
+        System.out.println(grades.calculateAverageGrade());
+        int[] gregorGrades = new int[5];
+        gregorGrades[0] = 0;
+        gregorGrades[1] = 20;
+        gregorGrades[2] = 30;
+        gregorGrades[3] = 40;
+        gregorGrades[4] = 50;
+
+        System.out.println(grades.calculateAverageFromArray(gregorGrades));
     }
 
     private static void notebookParameters(Notebook myNotebook, String s) {

@@ -21,10 +21,19 @@ public class Grades {
         return this.grades[this.size - 1];
     }
 
-    public double calculateAverageGrade(double average) {
+    public double calculateAverageGrade() {
         double sum = 0;
         for (int i = 0; i < grades.length; i++) {
             sum = sum + grades[i];
+            average = sum / this.size;
+        }
+        return average;
+    }
+
+    public double calculateAverageFromArray(int[] array){
+        double sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum = sum + array[i];
             average = sum / this.size;
         }
         return average;
