@@ -31,6 +31,7 @@ public class RandomNumbers {
         System.out.println(sum);
         return result;
     }
+
     public int getMax(int number){
         if(number>max){
             max = number;
