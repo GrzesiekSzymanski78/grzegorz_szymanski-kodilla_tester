@@ -7,7 +7,7 @@ public class Application {
         Calculator calculator = new Calculator();
         int a = 5;
         int b = 8;
-        int sumResult = calculator.sum(a, b);
+        double sumResult = calculator.sum(a, b);
         boolean correctSum = ResultChecker.assertEquals(13, sumResult);
         if (correctSum) {
             System.out.println("Metoda sum działa poprawnie dla liczb: " + a + " i " + b);
@@ -15,7 +15,7 @@ public class Application {
             System.out.println("Metoda sum nie działa poprawnie dla liczb: " + a + " i " + b);
         }
 
-        int subtractResult = calculator.subtract(a, b);
+        int subtractResult = calculator.minus(a,b);
         boolean correctSubtract = ResultChecker.assertEquals(-3, subtractResult);
         if (correctSubtract) {
             System.out.println("Metoda subtract działa poprawnie dla liczb: " + a + " i " + b);
@@ -23,7 +23,7 @@ public class Application {
             System.out.println("Metoda subtract nie działa poprawnie dla liczb: " + a + " i " + b);
         }
 
-        int squaredResult = calculator.squared(a);
+        double squaredResult = calculator.squared(a);
         boolean correctSquared = ResultChecker.assertEquals(25, squaredResult);
         if (correctSquared) {
             System.out.println("Metoda squared działa poprawnie dla liczby: " + a);
