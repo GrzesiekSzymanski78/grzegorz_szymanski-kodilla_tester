@@ -1,13 +1,21 @@
 package com.kodilla.school;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StudentTestSuite {
 
+    Student student;
+
+    @BeforeEach
+    public void setUp(){
+        student = new Student("Martin");
+    }
+
     @Test
     public void shouldCalculateCorrectAveragesIfValuesAreInRange(){
-        Student student = new Student("Martin");
+
         student.addGeographyGrade(4);
         student.addGeographyGrade(4);
         student.addGeographyGrade(2);
@@ -28,7 +36,7 @@ public class StudentTestSuite {
 
     @Test
     public void shouldCalculateAveragesIfValuesAreOutsideRange(){
-        Student student = new Student("Martin");
+
         student.addGeographyGrade(-2);
         student.addGeographyGrade(4);
         student.addGeographyGrade(8);
@@ -52,13 +60,12 @@ public class StudentTestSuite {
 
     @Test
     public void averageShouldBeZeroIfStudentDontHaveGrades(){
-        Student student = new Student("Martin");
         assertEquals(0,student.getAverage(),0.0001);
     }
 
     @Test
     public void shouldCalculateStudentAverage(){
-        Student student = new Student("Martin");
+        
         student.addGeographyGrade(4);
         student.addGeographyGrade(4);
         student.addGeographyGrade(2);
