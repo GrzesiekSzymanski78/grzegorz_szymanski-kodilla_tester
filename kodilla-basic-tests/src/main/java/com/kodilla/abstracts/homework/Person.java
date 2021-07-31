@@ -2,10 +2,11 @@ package com.kodilla.abstracts.homework;
 
 public class Person {
 
-    public String firstName, job;
+    public String firstName;
     private int age;
+    public Job job;
 
-    public Person(String firstName, int age, String job) {
+    public Person(String firstName, int age, Job job) {
         this.firstName = firstName;
         this.age = age;
         this.job = job;
@@ -20,7 +21,7 @@ public class Person {
         return age;
     }
 
-    public String getJob() {
+    public Job getJob() {
         return job;
     }
 }
