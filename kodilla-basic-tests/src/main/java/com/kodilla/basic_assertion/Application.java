@@ -23,7 +23,7 @@ public class Application {
             System.out.println("Metoda subtract nie działa poprawnie dla liczb: " + a + " i " + b);
         }
 
-        double squaredResult = calculator.squared(a);
+        double squaredResult = calculator.power(a,2);
         boolean correctSquared = ResultChecker.assertEquals(25, squaredResult);
         if (correctSquared) {
             System.out.println("Metoda squared działa poprawnie dla liczby: " + a);
