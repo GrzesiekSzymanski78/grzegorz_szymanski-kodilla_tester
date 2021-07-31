@@ -10,7 +10,7 @@ public class Calculator {
         return a - b;
     }
 
-    public double squared(double a) {
-        return a * a;
+    public double power(double a, double b) {
+        return Math.pow(a, b);
     }
 }

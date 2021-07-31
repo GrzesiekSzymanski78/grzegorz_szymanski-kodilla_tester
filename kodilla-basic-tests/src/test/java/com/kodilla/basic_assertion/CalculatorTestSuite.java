@@ -1,5 +1,7 @@
 package com.kodilla.basic_assertion;
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
@@ -7,9 +9,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorTestSuite {
 
+    Calculator calculator;
+
+    @BeforeEach
+    public void setUp() {
+        calculator = new Calculator();
+    }
+
     @Test
     public void testSum() {
-        Calculator calculator = new Calculator();
         int a = 5;
         int b = 8;
         int sumResult = calculator.sum(a, b);
@@ -18,7 +26,6 @@ public class CalculatorTestSuite {
 
     @Test
     public void testSubtract() {
-        Calculator calculator = new Calculator();
         int a = 5;
         int b = 8;
         int subtractResult = calculator.minus(a, b);
@@ -27,25 +34,22 @@ public class CalculatorTestSuite {
 
     @Test
     public void testSquaredPositiveNumber() {
-        Calculator calculator = new Calculator();
         double a = 5.0;
-        double squaredResult = calculator.squared(a);
+        double squaredResult = calculator.power(a, 2);
         assertEquals(25, squaredResult);
     }
 
     @Test
     public void testSquaredNegativeNumber() {
-        Calculator calculator = new Calculator();
         double a = -5.0;
-        double squaredResult = calculator.squared(a);
-        assertEquals(25,squaredResult,0.01);
+        double squaredResult = calculator.power(a, 2);
+        assertEquals(25, squaredResult, 0.01);
     }
 
     @Test
     public void testSquareZeroNumber() {
-        Calculator calculator = new Calculator();
         double a = 0.0;
-        double squaredResult = calculator.squared(a);
-        assertEquals(0.0,squaredResult,0.01);
+        double squaredResult = calculator.power(a, 2);
+        assertEquals(0.0, squaredResult, 0.01);
     }
 }
