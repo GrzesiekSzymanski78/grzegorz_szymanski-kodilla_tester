@@ -32,13 +32,18 @@ public class BankTestSuite {
 
     @Test
     public void shouldCalculateAveragesIfValuesAreOutsideRange() {
-        bank.addDepositCashMachine(0,1);
-        bank.addDepositCashMachine(-100,2);
-
-        bank.addWithdrawCashMachine(0,3);
+        bank.addWithdrawCashMachine(1,0);
         bank.addWithdrawCashMachine(5,2);
+        bank.addDepositCashMachine(1,1);
+        bank.addDepositCashMachine(2,4);
+        bank.addDepositCashMachine(-100,2);
+        bank.addDepositCashMachine(1,5);
 
-        assertEquals(0,bank.getAverageAmountDepositOperations(),0.01);
+        bank.addWithdrawCashMachine(1,3);
+        bank.addWithdrawCashMachine(5,2);
+        System.out.println("średnia " + bank.getAverageAmountDepositOperations());
+
+        assertEquals(1.83,bank.getAverageAmountDepositOperations(),0.01);
         assertEquals(2.5,bank.getAverageAmountWithdrawOperations(),0.01);
     }
 }

@@ -57,17 +57,22 @@ public class Bank {
         if (this.cashMachines.length == 0) {
             return 0;
         }
+        System.out.println(this.cashMachines.length);
         double deposit = 0;
         double depositNumber = 0;
         for (int i = 0; i < cashMachines.length; i++) {
-            CashMachine cashMachine = cashMachines[i];
-            for (int j = 0; j < cashMachine.getTransactions().length; j++) {
-                if (cashMachine.getTransactions()[j] > 0) {
-                    deposit = deposit + cashMachine.getTransactions()[j];
+//            CashMachine cashMachine = cashMachines[i];
+//            for (int j = 0; j < cashMachines[i].getTransactions().length; j++) {
+//                System.out.println("Jestem tu");
+//                if (cashMachines[i].getTransactions()[i] > 0) {
+                    deposit = deposit + cashMachines[i].getAverageOfPayments();
                     depositNumber = depositNumber + 1;
                 }
-            }
-        }
+//            }
+//        }
+        System.out.println(deposit/depositNumber);
+        System.out.println(deposit);
+        System.out.println(depositNumber);
         return deposit / depositNumber;
     }
 
@@ -100,8 +105,10 @@ public class Bank {
     }
 
     public void addWithdrawCashMachine(int operation, int cashMachineNumber) {
-        if (operation > -300 && operation < 0) {
+        System.out.println(operation);
+//        if (operation > -300 && operation < 0) {
+            System.out.println(operation);
             this.cashMachines[cashMachineNumber].addTransaction(operation);
-        }
+//        }
     }
 }

@@ -47,4 +47,20 @@ public class CashMachine {
         }
         return getCashAmount()/this.transactions.length;
     }
+
+    public double getAverageOfPayments() {
+        if (this.transactions.length == 0) {
+            return 0;
+        } else {
+            double avg = 0;
+            int operation = 0;
+            for (int i = 0; i < this.transactions.length; i++) {
+                if (this.transactions[i] > 0) {
+                    avg += this.transactions[i];
+                    operation += 1;
+                }
+            }
+            return avg / operation;
+        }
+    }
 }
