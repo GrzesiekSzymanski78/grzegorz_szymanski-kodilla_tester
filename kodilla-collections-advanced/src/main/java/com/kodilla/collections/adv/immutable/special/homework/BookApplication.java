@@ -1,5 +1,8 @@
 package com.kodilla.collections.adv.immutable.special.homework;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BookApplication {
     public static void main(String[] args) {
 
@@ -8,16 +11,24 @@ public class BookApplication {
         bookManager.createBook("The girl with the dragoon tattoo", "Stieg Larsson");
         bookManager.createBook("The Snowman", "Jo Nesbo");
         bookManager.createBook("The Snowman", "Jo Nesbo");
+        bookManager.createBook("The girl with the dragoon tattoo","Stieg Larsson");
+        bookManager.createBook("Punishment and Crime", "Fyodor Dostoevsky");
         System.out.println(bookManager.getBooks());
 
-        Book b1 = new Book("Punishment and Crime", "Fyodor Dostoevsky");
-        Book b2 = new Book("Punishment and Crime", "Fyodor Dostoevsky");
-        Book b3 = new Book("The girl with the dragoon tattoo","Stieg Larsson");
-        Book b4 = new Book("The girl with the dragoon tattoo","Stieg Larsson");
-        Book b5 = new Book("The Snowman", "Jo Nesbo");
-        Book b6 = new Book("The Snowman", "Jo Nesbo");
-        System.out.println("Compare addresses: " + (b1 == b2));
-        System.out.println("b3.equals(b4): " + b3.equals(b4));
-        System.out.println("b5.equals(b6): " + b5.equals(b6));
+        List<Book> bookList = new ArrayList<>();
+        bookList.add(new Book("Punishment and Crime", "Fyodor Dostoevsky"));
+        bookList.add(new Book("Punishment and Crime", "Fyodor Dostoevsky"));
+        bookList.add(new Book("The girl with the dragoon tattoo", "Stieg Larsson"));
+        bookList.add(new Book("The girl with the dragoon tattoo", "Stieg Larsson"));
+        bookList.add(new Book("The Snowman", "Jo Nesbo"));
+        bookList.add(new Book("The Snowman", "Jo Nesbo"));
+
+        for (int i = 0; i < bookManager.getBooks().size(); i++) {
+            for (int j = 0; j < bookList.size(); j++) {
+                bookManager.getBooks().get(i).equals(bookList.get(j));
+                j++;
+            }
+            i++;
+        }
     }
 }
