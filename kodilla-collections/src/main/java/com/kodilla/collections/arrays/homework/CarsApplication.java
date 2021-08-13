@@ -19,7 +19,7 @@ public class CarsApplication {
 
     public static Car drawCar() {
         Random random = new Random();
-        int drawCarKind = random.nextInt(3);
+        int drawCarKind = random.nextInt(2);
         int drawSpeed = random.nextInt(200);
         if (drawCarKind == 0)
             return new Ford(drawSpeed);

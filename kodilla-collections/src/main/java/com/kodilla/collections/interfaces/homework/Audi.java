@@ -4,7 +4,7 @@ public class Audi implements Car {
 
     public int speed;
 
-    public Audi(int speed){
+    public Audi(int speed) {
         this.speed = speed;
     }
 
@@ -15,12 +15,12 @@ public class Audi implements Car {
 
     @Override
     public void increaseSpeed() {
-        speed += 25;
+        speed += 20;
     }
 
     @Override
     public void decreaseSpeed() {
-        speed -= 10;
+        speed -= 7;
     }
 
     @Override
