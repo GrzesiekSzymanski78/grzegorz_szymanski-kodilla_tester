@@ -4,19 +4,19 @@ public class Ford implements Car {
 
     public int speed;
 
-    public Ford(int speed){
+    public Ford(int speed) {
         this.speed = speed;
     }
 
-    public int getSpeed(){
+    public int getSpeed() {
         return speed;
     }
 
-    public void increaseSpeed(){
+    public void increaseSpeed() {
         speed += 20;
     }
 
-    public void decreaseSpeed(){
+    public void decreaseSpeed() {
         speed -= 10;
     }
 
