@@ -4,20 +4,19 @@ import java.util.*;
 
 public class FlightFinder {
 
-
     public List<Flight> findFlightsFrom(String departure) {
-        List<Flight> result = new ArrayList<>();
+        List<Flight> resultFrom = new ArrayList<>();
         for (Flight flight : FlightRepository.getFlightTable()) {
             if (flight.getDeparture().equals(departure));
         }
-        return result;
+        return resultFrom;
     }
 
     public List<Flight> findFlightTo(String arrival) {
-        List<Flight> result = new ArrayList<>();
+        List<Flight> resultTo = new ArrayList<>();
         for (Flight flight : FlightRepository.getFlightTable()) {
             if (flight.getArrival().equals(arrival)) ;
         }
-        return result;
+        return resultTo;
     }
 }

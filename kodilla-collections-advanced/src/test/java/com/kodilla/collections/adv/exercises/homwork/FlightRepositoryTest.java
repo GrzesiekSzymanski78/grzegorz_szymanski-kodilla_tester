@@ -28,8 +28,7 @@ public class FlightRepositoryTest {
         List<Flight> result = flightFinder.findFlightsFrom("Prague");
         List<Flight> expectedList = new ArrayList<>();
         expectedList.add(new Flight("Prague", "Warsaw"));
-        expectedList.add(new Flight("Paris", "Warsaw"));
-        expectedList.add(new Flight("Berlin", "Warsaw"));
+        expectedList.add(new Flight("Prague", "Berlin"));
         assertEquals(expectedList, result);
     }
 }
