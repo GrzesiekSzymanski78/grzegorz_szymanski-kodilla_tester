@@ -11,25 +11,25 @@ class UserValidatorTestSuite {
 
     @ParameterizedTest
     @CsvSource(value = {"ArD", "mA4_p.-", "...", "-_-"})
-    public void shouldReturnTrueIfUserNameIsCorrect() {
-        assertTrue(validator.validateUserName("M.o-o_N"));
+    public void shouldReturnTrueIfUserNameIsCorrect(String username) {
+        assertTrue(validator.validateUserName(username));
     }
 
     @ParameterizedTest
     @CsvSource(value = {"34", "%$*", "023^", "fr", "r"})
-    public void shouldReturnFalseIfUserNameIsNotCorrect() {
-        assertFalse(validator.validateUserName("&%$"));
+    public void shouldReturnFalseIfUserNameIsNotCorrect(String username) {
+        assertFalse(validator.validateUserName(username));
     }
 
     @ParameterizedTest
     @CsvSource(value = {"g_s@poczta.onet.pl", "martin@wp.pl", "tree@poland.pl"})
-    public void shouldReturnTrueIfEmailIsCorrect() {
-        assertTrue(validator.validateEmail("test@gmail.com"));
+    public void shouldReturnTrueIfEmailIsCorrect(String email) {
+        assertTrue(validator.validateEmail(email));
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"@may.pl","mark@pl","dark@gate_com.pl"})
-    public void shouldReturnFalseIfEmailIsNotCorrect(){
-        assertFalse(validator.validateEmail("@map"));
+    @CsvSource(value = {"@may.pl", "mark@pl", "dark@gate_com.pl"})
+    public void shouldReturnFalseIfEmailIsNotCorrect(String email) {
+        assertFalse(validator.validateEmail(email));
     }
 }
