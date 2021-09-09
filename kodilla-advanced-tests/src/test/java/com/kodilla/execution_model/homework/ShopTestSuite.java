@@ -11,11 +11,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class ShopTestSuite {
 
     Shop shop = new Shop();
-    Order order1 = new Order(125.99, LocalDate.of(2021, 06, 01), "Kate81");
-    Order order2 = new Order(60.00, LocalDate.of(2021, 04, 30), "Johnny25");
-    Order order3 = new Order(55.50, LocalDate.of(2021, 05, 29), "Dave02");
-    Order order4 = new Order(260.00, LocalDate.of(2021, 04, 15), "JackBlack");
-    Order order5 = new Order(32.20, LocalDate.of(2021, 06, 23), "Harry02");
+
+    @BeforeEach
+    public void initializeOrders() {
+        shop.addOrder(new Order(125.99, LocalDate.of(2021, 06, 01), "Kate81"));
+        shop.addOrder(new Order(60.00, LocalDate.of(2021, 04, 30), "Johnny25"));
+        shop.addOrder(new Order(55.50, LocalDate.of(2021, 05, 29), "Dave02"));
+        shop.addOrder(new Order(260.00, LocalDate.of(2021, 04, 15), "JackBlack"));
+        shop.addOrder(new Order(32.20, LocalDate.of(2021, 06, 23), "Harry02"));
+    }
 
     @Test
     public void shouldAddOrdersToOrderList() {
@@ -81,26 +85,18 @@ class ShopTestSuite {
         assertEquals(0, shop.getOrderSize());
     }
 
-    @BeforeEach
-    public void initializeOrders() {
-        shop.addOrder(order1);
-        shop.addOrder(order2);
-        shop.addOrder(order3);
-        shop.addOrder(order4);
-        shop.addOrder(order5);
-    }
     @AfterEach
-    public void resetValues(){
+    public void resetValues() {
         System.out.println("Resetting values...");
     }
 
     @BeforeAll
-    public static void displayIntroMessages(){
+    public static void displayIntroMessages() {
         System.out.println("Starting testing");
     }
 
     @AfterAll
-    public static void displayGoodbyeMessage(){
+    public static void displayGoodbyeMessage() {
         System.out.println("Finishing testing");
     }
 }
