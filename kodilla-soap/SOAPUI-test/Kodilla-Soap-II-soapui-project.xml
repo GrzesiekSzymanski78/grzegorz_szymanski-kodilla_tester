@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="dd0cadd0-aa6a-4ad5-b313-bbb7e2de5735" activeEnvironment="Default" name="Kodilla Soap II"
+                    resourceRoot="" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config">
+    <con:settings/>
+    <con:testSuite id="cff02a76-962c-4705-878a-9a9d76940a26" name="Courses TestSuite II">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase id="54076172-efc2-47e4-a7c7-772ce0d16fa7" failOnError="true" failTestCaseOnErrors="true"
+                      keepSession="false" maxResults="0" name="Not existing course TestCase" searchProperties="true">
+            <con:settings/>
+            <con:properties/>
+        </con:testCase>
+        <con:properties/>
+    </con:testSuite>
+    <con:properties/>
+    <con:wssContainer/>
+    <con:oAuth2ProfileContainer/>
+    <con:oAuth1ProfileContainer/>
+</con:soapui-project>
