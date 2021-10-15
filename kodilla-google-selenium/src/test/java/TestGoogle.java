@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -11,16 +12,21 @@ import pages.RandomPage;
 
 public class TestGoogle {
 
-    WebDriver driver = new ChromeDriver();
-    private final GoogleSearch googleSearch = new GoogleSearch(driver);
-    private final GoogleResult googleResult = new GoogleResult(driver);
-    private final RandomPage randomPage = new RandomPage(driver);
+    WebDriver driver;
+    private GoogleSearch googleSearch;
+    private GoogleResult googleResult;
+    private RandomPage randomPage;
 
-    @Before
+   @Before
     public void testSetup() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        driver.navigate().to("https://www.google.com");
+        WebDriverManager.chromedriver().ignoreVersions("95", "93");
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
+        driver.get("https://www.google.pl");
+        googleSearch = new GoogleSearch(driver);
+        googleResult = new GoogleResult(driver);
+        randomPage = new RandomPage(driver);
     }
 
     @After

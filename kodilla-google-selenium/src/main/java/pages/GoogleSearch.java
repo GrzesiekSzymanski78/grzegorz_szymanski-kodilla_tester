@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,31 +12,32 @@ import java.util.List;
 
 public class GoogleSearch extends AbstractPage {
 
+    private GoogleResult googleResult;
+
     @FindBy(css = "input[title='Szukaj']")
-    static WebElement inputField;
+    private WebElement inputField;
 
     @FindBy(css = "input[value='Szukaj w Google']")
-    static List<WebElement> searchButton;
+    private List<WebElement> buttonList;
 
     @FindBy(id = "L2AGLb")
-    static WebElement consentToCookiesBtn;
-    private static GoogleResult googleResult;
+    private WebElement consentToCookiesBtn;
 
     public GoogleSearch(WebDriver driver) {
         super(driver);
+        PageFactory.initElements(driver, this);
     }
 
     public void searchResults() {
-        PageFactory.initElements(driver, GoogleSearch.class);
         consentToCookiesBtn.click();
         inputField.sendKeys("Kodilla");
-        googleResult = loadResults(driver);
+        googleResult = loadResults();
         googleResult.isSeeResults();
     }
 
-    public GoogleResult loadResults(WebDriver driver) {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(searchButton.get(1))).click();
+    public GoogleResult loadResults() {
+        WebElement searchButton = buttonList.get(1);
+        searchButton.click();
         GoogleResult googleResult = new GoogleResult(driver);
         return googleResult;
     }
