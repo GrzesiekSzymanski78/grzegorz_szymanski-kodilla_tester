@@ -10,7 +10,7 @@ public class AllCashWithdrawalSteps implements En {
     public AllCashWithdrawalSteps() {
         Given("In my wallet i have $200", () -> {
             wallet.deposit(200);
-            Assert.assertEquals(200, wallet.getBalance());
+            Assert.assertEquals("Incorrect wallet balance",200, wallet.getBalance());
         });
 
         When("I request $200", () -> {
@@ -20,11 +20,11 @@ public class AllCashWithdrawalSteps implements En {
 
         Then("$200 should be dispensed",() -> {
             cashSlot.dispense(200);
-            Assert.assertEquals(200,cashSlot.getContents());
+            Assert.assertEquals("Incorrect dispense",200,cashSlot.getContents());
         });
 
         Then("The balance of my wallet should be $0", () -> {
-            Assert.assertEquals(0,wallet.getBalance());
+            Assert.assertEquals("Incorrect wallet balance",0,wallet.getBalance());
         });
     }
 }

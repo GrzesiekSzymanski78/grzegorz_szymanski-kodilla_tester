@@ -10,7 +10,7 @@ public class PreventOverdrawnSteps implements En {
     public PreventOverdrawnSteps() {
         Given("My wallet has been credited $200", () -> {
             wallet.deposit(200);
-            Assert.assertEquals(200, wallet.getBalance());
+            Assert.assertEquals("Incorrect wallet balance",200, wallet.getBalance());
         });
 
         When("I request $201", () -> {
@@ -19,7 +19,7 @@ public class PreventOverdrawnSteps implements En {
         });
 
         Then("Nothing should be dispensed", () -> {
-            Assert.assertEquals(200, wallet.getBalance());
+            Assert.assertEquals("Incorrect wallet balance",200, wallet.getBalance());
         });
         Then("I should be told that I have insufficient funds in my account", () -> {
             Cashier cashier = new Cashier(cashSlot);
