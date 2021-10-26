@@ -34,6 +34,7 @@ public class Application {
         System.out.println();
         System.out.println("The area of the equilateral triangle: " + equilateralTriangle.result);
         equilateralTriangle.calculateCircuit(10, 0);
-        System.out.println("The circuit of the equilateral triangle: " + equilateralTriangle.result);
+        System.out.println("The circuit of the equilateral triangle: "
+                + equilateralTriangle.result);
     }
 }

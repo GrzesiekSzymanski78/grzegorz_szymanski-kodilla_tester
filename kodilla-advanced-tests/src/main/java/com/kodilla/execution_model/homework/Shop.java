@@ -15,8 +15,10 @@ public class Shop {
 
     public List<Order> getOrdersInTwoDatesRange(LocalDate startDate, LocalDate endDate) {
         return shopOrders.stream()
-                .filter(d -> d.getOrderDate().isAfter(startDate) && d.getOrderDate().isBefore(endDate)
-                        || d.getOrderDate().isEqual(startDate) || d.getOrderDate().isEqual(endDate))
+                .filter(d -> d.getOrderDate().isAfter(startDate)
+                        && d.getOrderDate().isBefore(endDate)
+                        || d.getOrderDate().isEqual(startDate)
+                        || d.getOrderDate().isEqual(endDate))
                 .collect(Collectors.toList());
     }
 

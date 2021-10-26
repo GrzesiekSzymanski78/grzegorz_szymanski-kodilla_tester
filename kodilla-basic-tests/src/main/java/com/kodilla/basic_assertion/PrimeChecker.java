@@ -15,6 +15,7 @@ public class PrimeChecker {
         }
         return true;
     }
+
     public int getCount(){
         return count;
     }

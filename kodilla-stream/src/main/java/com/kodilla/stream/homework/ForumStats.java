@@ -12,7 +12,8 @@ public class ForumStats {
                 .mapToInt(n -> n)
                 .average()
                 .getAsDouble();
-        System.out.println("average number of posts by users of age 40 or older: " + avgNumberOfPostUsersOver40);
+        System.out.println("average number of posts by users of age 40 or older: "
+                + avgNumberOfPostUsersOver40);
 
         double avgNumberOfPostUsersUnder40 = UsersRepository.getUserList()
                 .stream()
@@ -21,6 +22,7 @@ public class ForumStats {
                 .mapToInt(n -> n)
                 .average()
                 .getAsDouble();
-        System.out.println("average number of posts by users under the age of 40: " + avgNumberOfPostUsersUnder40);
+        System.out.println("average number of posts by users under the age of 40: "
+                + avgNumberOfPostUsersUnder40);
     }
 }

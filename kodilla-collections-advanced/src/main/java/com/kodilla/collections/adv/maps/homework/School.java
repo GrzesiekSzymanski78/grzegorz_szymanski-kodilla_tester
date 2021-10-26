@@ -38,7 +38,8 @@ public class School {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         School school = (School) o;
-        return Objects.equals(numberOfStudentsInClasses, school.numberOfStudentsInClasses) && Objects.equals(schoolName, school.schoolName);
+        return Objects.equals(numberOfStudentsInClasses, school.numberOfStudentsInClasses)
+                && Objects.equals(schoolName, school.schoolName);
     }
 
     @Override

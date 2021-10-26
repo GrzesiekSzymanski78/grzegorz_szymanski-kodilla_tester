@@ -30,7 +30,9 @@ public class Order {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Order order = (Order) o;
-        return Double.compare(order.quantity, quantity) == 0 && Objects.equals(orderNumber, order.orderNumber) && Objects.equals(productName, order.productName);
+        return Double.compare(order.quantity, quantity) == 0 &&
+                Objects.equals(orderNumber, order.orderNumber) &&
+                Objects.equals(productName, order.productName);
     }
 
     @Override

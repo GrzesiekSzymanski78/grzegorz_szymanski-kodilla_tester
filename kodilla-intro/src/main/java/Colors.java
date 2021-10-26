@@ -17,7 +17,8 @@ public class Colors {
                 case "G":
                     return "Green";
                 default:
-                    System.out.println("Sorry we don't have a color that starts with that letter. Choose a different letter.");
+                    System.out.println("Sorry we don't have a color " +
+                            "that starts with that letter. " + "Choose a different letter.");
             }
         }
     }

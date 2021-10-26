@@ -13,7 +13,8 @@ public class ShippingCenter implements NotificationsService, DeliveryService {
         }
     }
 
-    public ShippingCenter(DeliveryService deliveryService, NotificationsService notificationsService) {
+    public ShippingCenter(DeliveryService deliveryService,
+                          NotificationsService notificationsService) {
         this.deliveryService = deliveryService;
         this.notificationsService = notificationsService;
     }

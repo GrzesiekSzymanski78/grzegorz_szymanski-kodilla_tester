@@ -13,7 +13,8 @@ public class Application {
     }
 
     private static void print(Student student) {
-        System.out.println("student: " + student.getName()  + ", teacher: " + student.getTeacher(student));
+        System.out.println("student: " + student.getName()
+                + ", teacher: " + student.getTeacher(student));
     }
 
     private static List<Student> initStudents() {

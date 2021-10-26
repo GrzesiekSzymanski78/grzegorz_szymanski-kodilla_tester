@@ -20,7 +20,8 @@ public class SchoolDirectory {
         schoolPrincipalHashMap.put(thirdSchool, thirdSchoolPrincipal);
 
         for (Map.Entry<School, Principal> schoolPrincipalEntry : schoolPrincipalHashMap.entrySet())
-            System.out.println("School director: " + schoolPrincipalEntry.getValue().getFirstName() + " " +
+            System.out.println("School director: "
+                    + schoolPrincipalEntry.getValue().getFirstName() + " " +
                     schoolPrincipalEntry.getValue().getSecondName() + ", School name: "
                     + schoolPrincipalEntry.getKey().getSchoolName() +
                     ", Number of students: " + schoolPrincipalEntry.getKey().getNumberOfStudents());

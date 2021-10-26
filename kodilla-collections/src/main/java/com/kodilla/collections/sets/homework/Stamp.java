@@ -19,7 +19,8 @@ public class Stamp {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Stamp stamp = (Stamp) o;
-        return Double.compare(stamp.stampSize, stampSize) == 0 && isStamped == stamp.isStamped && Objects.equals(stampName, stamp.stampName);
+        return Double.compare(stamp.stampSize, stampSize) == 0
+                && isStamped == stamp.isStamped && Objects.equals(stampName, stamp.stampName);
     }
 
     @Override

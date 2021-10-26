@@ -16,7 +16,8 @@ public class AllegroTestingApp {
         driver.get("https://allegro.pl/");
         driver.manage().window().maximize();
 
-        WebElement acceptBtn = driver.findElement(By.cssSelector("button[data-role=accept-consent"));
+        WebElement acceptBtn = driver.findElement(By.cssSelector
+                ("button[data-role=accept-consent"));
         acceptBtn.click();
         WebElement categoryElectronic = driver.findElement(By.linkText("Elektronika"));
         categoryElectronic.click();

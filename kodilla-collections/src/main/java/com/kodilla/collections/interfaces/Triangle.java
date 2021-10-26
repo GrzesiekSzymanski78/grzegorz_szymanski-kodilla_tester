@@ -37,7 +37,9 @@ public class Triangle implements Shape{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Triangle triangle = (Triangle) o;
-        return Double.compare(triangle.width, width) == 0 && Double.compare(triangle.height, height) == 0 && Double.compare(triangle.hypotenuse, hypotenuse) == 0;
+        return Double.compare(triangle.width, width) == 0
+                && Double.compare(triangle.height, height) == 0
+                && Double.compare(triangle.hypotenuse, hypotenuse) == 0;
     }
 
     @Override

@@ -25,7 +25,8 @@ public class Principal {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Principal principal = (Principal) o;
-        return Objects.equals(firstName, principal.firstName) && Objects.equals(secondName, principal.secondName);
+        return Objects.equals(firstName, principal.firstName)
+                && Objects.equals(secondName, principal.secondName);
     }
 
     @Override

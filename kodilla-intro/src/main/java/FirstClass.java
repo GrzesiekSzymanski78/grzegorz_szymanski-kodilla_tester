@@ -33,8 +33,8 @@ public class FirstClass {
     }
 
     private static void notebookParameters(Notebook myNotebook, String s) {
-        System.out.println("weight: " + myNotebook.weight + ", " + s + myNotebook.price + ", " + "year: "
-                + myNotebook.year);
+        System.out.println("weight: " + myNotebook.weight + ", "
+                + s + myNotebook.price + ", " + "year: " + myNotebook.year);
         myNotebook.checkPrice();
         myNotebook.checkWeight();
         myNotebook.checkValuation();

@@ -23,7 +23,8 @@ public class Task {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Task task = (Task) o;
-        return Objects.equals(name, task.name) && Objects.equals(opened, task.opened) && Objects.equals(deadline, task.deadline);
+        return Objects.equals(name, task.name) && Objects.equals(opened, task.opened)
+                && Objects.equals(deadline, task.deadline);
     }
 
     @Override

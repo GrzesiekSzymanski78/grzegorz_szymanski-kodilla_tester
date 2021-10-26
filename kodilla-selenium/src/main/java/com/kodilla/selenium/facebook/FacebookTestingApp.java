@@ -9,16 +9,20 @@ import org.openqa.selenium.support.ui.Select;
 
 public class FacebookTestingApp {
     public static void main(String[] args) throws NoSuchFrameException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Selenium-drivers\\Chrome\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",
+                "C:\\Selenium-drivers\\Chrome\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.navigate().to("https://facebook.com");
         driver.manage().window().maximize();
 
-        WebElement cookieAcceptBtn = driver.findElement(By.cssSelector("[data-testid='cookie-policy-dialog-accept-button']"));
+        WebElement cookieAcceptBtn = driver.findElement
+                (By.cssSelector("[data-testid='cookie-policy-dialog-accept-button']"));
         cookieAcceptBtn.click();
-        WebElement openRegistrationBtn = driver.findElement(By.cssSelector("[data-testid='open-registration-form-button']"));
+        WebElement openRegistrationBtn = driver.findElement
+                (By.cssSelector("[data-testid='open-registration-form-button']"));
         openRegistrationBtn.click();
-        WebElement yearCombo = driver.findElement(By.xpath("//*[@id=\\\"birthday_wrapper\\\"]/div/span/span/select[3]"));
+        WebElement yearCombo = driver.findElement(By.xpath
+                ("//*[@id=\\\"birthday_wrapper\\\"]/div/span/span/select[3]"));
         yearCombo.sendKeys("Stefek");
         Select yearSelect = new Select(yearCombo);
         yearSelect.selectByIndex(5);

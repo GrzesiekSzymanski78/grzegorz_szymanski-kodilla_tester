@@ -32,7 +32,8 @@ public class Order {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Order order = (Order) o;
-        return orderValue == order.orderValue && Objects.equals(orderDate, order.orderDate) && Objects.equals(userLogin, order.userLogin);
+        return orderValue == order.orderValue && Objects.equals(orderDate, order.orderDate)
+                && Objects.equals(userLogin, order.userLogin);
     }
 
     @Override

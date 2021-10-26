@@ -18,7 +18,8 @@ public class UserApp {
         average = sum / users.length;
         for (int i = 0; i < users.length; i++) {
             if (average > users[i].userAge) {
-                System.out.println("User name is: " + users[i].getUserName() + " is younger than age average.");
+                System.out.println("User name is: " + users[i].getUserName()
+                        + " is younger than age average.");
             }
         }
         System.out.println("The average age is: " + average + " years.");

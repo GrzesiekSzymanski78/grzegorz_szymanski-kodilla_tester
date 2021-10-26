@@ -1,6 +1,6 @@
 package com.kodilla.mockito.homework;
 
-import java.util.HashMap;;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
