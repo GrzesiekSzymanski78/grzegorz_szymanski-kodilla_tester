@@ -28,7 +28,7 @@ public class DbManagerTestSuite {
         while (rs.next()) {
             count = rs.getInt("COUNT(*)");
         }
-        String sql ="INSERT INTO USERS(FIRSTNAME, LASTNAME) VALUES ('Zara','Ali')";
+        String sql = "INSERT INTO USERS(FIRSTNAME, LASTNAME) VALUES ('Zara','Ali')";
         statement.executeUpdate(sql);
         sql = "INSERT INTO USERS(FIRSTNAME, LASTNAME) VALUES ('Otman', 'Use')";
         statement.executeUpdate(sql);
@@ -48,12 +48,12 @@ public class DbManagerTestSuite {
         int counter = 0;
         while (rs.next()) {
             System.out.println(rs.getInt("ID") + "," +
-                               rs.getString("FIRSTNAME") + "," +
-                               rs.getString("LASTNAME"));
+                    rs.getString("FIRSTNAME") + "," +
+                    rs.getString("LASTNAME"));
             counter++;
         }
         int expected = count + 5;
-        Assert.assertEquals(expected,counter);
+        Assert.assertEquals(expected, counter);
 
         rs.close();
         statement.close();
